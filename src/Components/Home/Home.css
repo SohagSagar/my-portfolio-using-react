@@ -1,0 +1,20 @@
+.intro-part{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 55%;
+}
+.intro-part p{
+    font-family: 'Roboto', sans-serif;
+
+}
+.intro-part h1,h3,h6{
+    line-height: 1em;
+}
+.image-part{
+    width: 40%;
+}
+.image-part img{
+    width: 600px;
+}
+button{
+    font-family: 'Roboto', sans-serif;
+}
