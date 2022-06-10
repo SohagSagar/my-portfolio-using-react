@@ -1,11 +1,11 @@
 import React from 'react';
 import './Home.css';
-import coder from '../../resourses/image-2.gif';
+import coder from '../../resourses/textimage.gif';
 
 
 const Home = () => {
     return (
-        <div className='bg-bgWhite lg:px-12 pb-32'>
+        <div className='bg-bgWhite lg:px-12 pb-8'>
 
             <section className='home-section flex justify-between items-center mt-16'>
                 <div className='intro-part'>
@@ -23,10 +23,9 @@ const Home = () => {
                 <div className='image-part'>
                     <img src={coder} alt="" />
                 </div>
+                
             </section>
-
            
-
         </div>
     );
 };

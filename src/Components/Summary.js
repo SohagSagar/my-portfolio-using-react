@@ -6,8 +6,8 @@ import { HiUserGroup } from 'react-icons/hi';
 
 const Summary = () => {
     return (
-        <div className='bg-secondary '>
-            <section className='lg:px-12 mt-[-50px] py-10 text-white grid lg:grid-cols-3 sm:grid-cols-1 gap-5 justify-items-center'>
+        <div className=' '>
+            <section className='mt-[-110px] lg:px-12 py-10 text-white grid lg:grid-cols-3 sm:grid-cols-1 gap-5 justify-items-center items-center'>
                 <div class="card w-96  shadow-xl bg-[#292B2E] p-4">
                     <div class=" flex justify-around items-center">
                         <div className='text-5xl rounded-full p-3 bg-primary text-secondary'><GiAchievement /></div>
