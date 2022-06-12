@@ -7,7 +7,7 @@ import { AiFillAlert } from 'react-icons/ai';
 
 const AboutMe = () => {
     return (
-        <div className='pb-10'>
+        <div id='about' className='pb-10'>
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#333333" fill-opacity="1" d="M0,96L120,85.3C240,75,480,53,720,48C960,43,1200,53,1320,58.7L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
 
