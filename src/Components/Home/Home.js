@@ -5,7 +5,7 @@ import coder from '../../resourses/textimage.gif';
 
 const Home = () => {
     return (
-        <div className='bg-bgWhite lg:px-12 pb-8'>
+        <div id='home' className='bg-bgWhite lg:px-12 pb-8'>
 
             <section className='home-section flex justify-between items-center mt-16'>
                 <div className='intro-part'>

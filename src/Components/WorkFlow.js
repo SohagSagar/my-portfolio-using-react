@@ -7,7 +7,7 @@ import { GiFinishLine } from 'react-icons/gi';
 
 const WorkFlow = () => {
     return (
-        <div className='bg-secondary px-12 py-28'>
+        <div id='work-flow' className='bg-secondary px-12 py-28 '>
             <div className='text-white'>
                 <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Work Flow</h1>
                 <h2 className='font-bold text-[50px] leading-tight '>My Work Process</h2>
@@ -43,7 +43,7 @@ const WorkFlow = () => {
                     <li class="step"><div>
                         <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#6A1B4D]">
                             <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#6A1B4D]">
-                                <MdGpsFixed className='text-4xl inline ' />
+                                <CgWebsite className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Skeleton</p>
                                 <p className='mt-2 break-all text-left font-semibold'>I create a skeleton of the product which is about to design.</p>
                             </div>
@@ -55,7 +55,7 @@ const WorkFlow = () => {
                     <li class="step"><div>
                         <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#8D3DAF]">
                             <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#8D3DAF]">
-                                <MdGpsFixed className='text-4xl inline ' />
+                                <MdWeb className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Prototype</p>
                                 <p className='mt-2 break-all text-left font-semibold'>I make a design and prototype for the project</p>
                             </div>
@@ -67,7 +67,7 @@ const WorkFlow = () => {
                         <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#1FAA59]">
 
                             <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#1FAA59]">
-                                <MdGpsFixed className='text-4xl inline ' />
+                                <GiFinishLine className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Implement</p>
                                 <p className='mt-2 break-all text-left font-semibold'>After implementation I deliver for implementation</p>
                             </div>

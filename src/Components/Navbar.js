@@ -1,20 +1,27 @@
 import React from 'react';
+import './Navbar.css';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { AiFillGithub } from 'react-icons/ai';
+import { RiFacebookFill } from 'react-icons/ri';
+import { HashLink } from 'react-router-hash-link';
+
 
 const Navbar = () => {
 
     const menu =
         <>
-            
-            <li><a >HOME</a></li>
-            <li><a href='#about'>ABOUT</a></li>
-            <li><a href='#skills'>SKILLS</a></li>
-            <li><a>PORTFOLIO</a></li>
-            <li><a>CONTACT</a></li>
-            <li><a>REVIEWS</a></li>
+
+            <li><HashLink to="/#home">HOME</HashLink></li>
+            <li><HashLink to="/#about">ABOUT</HashLink></li>
+            <li><HashLink to="/#skills">SKILLS</HashLink></li>
+            <li><HashLink to="/#work-flow">WORK FLOWS</HashLink></li>
+            <li><HashLink to="/#portfolio">PORTFOLIO</HashLink></li>
+            {/* <li><a>CONTACT</a></li>
+            <li><a>REVIEWS</a></li> */}
         </>
 
     return (
-        <div class="navbar bg-white lg:px-12 sticky top-0 z-10">
+        <div class="navbar bg-white lg:px-12 sticky top-0 z-10 scrolled">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -32,7 +39,13 @@ const Navbar = () => {
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn">Get started</a>
+                <div className='flex item-center justify-around text-xl '>
+                    <a href="https://www.linkedin.com/in/sohagsagar29/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn className='mr-4' /></a>
+                    <a href="https://github.com/SohagSagar?tab=repositories" target="_blank" rel="noopener noreferrer"><AiFillGithub className='mr-4' /></a>
+                    <a href="https://www.facebook.com/sagorsohag29" target="_blank" rel="noopener noreferrer"><RiFacebookFill /></a>
+
+                </div>
+
             </div>
         </div>
     );
