@@ -5,9 +5,9 @@ import coder from '../../resourses/textimage.gif';
 
 const Home = () => {
     return (
-        <div id='home' className='bg-bgWhite lg:px-12 pb-8'>
+        <div id='home' className='bg-white lg:px-12 pb-8'>
 
-            <section className='home-section flex justify-between items-center mt-16'>
+            <section className='home-section flex justify-between items-center pt-16'>
                 <div className='intro-part'>
                     <h6 className='text-xl '>Hello,</h6>
                     <h1 className='text-[100px] '>I Am <span className='text-primary'>Sohag</span></h1>

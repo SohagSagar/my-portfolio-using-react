@@ -23,17 +23,20 @@ import slider2 from '../resourses/slider/admin_add item.png'
 import slider3 from '../resourses/slider/login pannel.png'
 import slider4 from '../resourses/slider/user pannel.png'
 import { useQuery } from 'react-query';
-import Loading from './Loading';
+import Loading from './Loading';    
 
 
 const ProjectDetails = () => {
     const { id } = useParams();
-    const { data: projectDetails, isLoading } = useQuery('project', () => fetch(`http://localhost:5000/project-info/${id}`).then(res => res.json()));
-
-    if (isLoading) {
-        return <Loading />
-    }
-    const { name, type, stacks, detailsImg, descriptions, clientLink, serverLink, liveLink } = projectDetails;
+    console.log(id);
+    const { data: projectDetails, isLoading } = useQuery('project', () => fetch(`http://localhost:5000/project/${id}`).then(res => res.json()));  
+    
+   if(isLoading){
+    return <Loading/>
+   }
+    console.log('data',projectDetails.length);
+   
+    const { name, type, stacks, detailsImg, descriptions, clientLink, serverLink, liveLink, credentials } = projectDetails;
     console.log(projectDetails);
 
 
@@ -43,6 +46,9 @@ const ProjectDetails = () => {
             <div class="card  lg:w-[800px] bg-base-100 shadow-xl ">
                 <div class="card-body">
                     <h2 class="text-center font-semibold text-lg ">Featured Images</h2>
+                    {
+                        !detailsImg && <Loading></Loading>
+                    }
 
                     <Swiper className="mySwiper "
                         cssMode={true}
@@ -63,7 +69,7 @@ const ProjectDetails = () => {
 
                     >
                         {
-                            detailsImg.map(img=><SwiperSlide key={img._id}><img src={img} alt="" /> </SwiperSlide>)
+                            detailsImg?.map(img=><SwiperSlide key={img._id}><img src={img} alt="" /> </SwiperSlide>)
                         }
                         
 
@@ -85,6 +91,14 @@ const ProjectDetails = () => {
                                 </tr><hr />
 
                                 <tr>
+                                    <th>Credentials</th>
+                                    {
+                                        credentials?.length>0 ? <td>{credentials[0]} <br /> {credentials[1]}</td> :
+                                        <td>N/A</td>
+                                    }
+                                </tr><hr />
+
+                                <tr>
                                     <th>Type</th>
                                     <td>{type}</td>
                                 </tr><hr />
@@ -98,7 +112,7 @@ const ProjectDetails = () => {
                                     <th>Descriptions</th>
                                     <td><ul className='list-disc list-inside text-justify whitespace-pre-line'>
                                         {
-                                            descriptions.map(des => <li key={des._key}>{des}</li>)
+                                            descriptions?.map(des => <li key={des._key}>{des}</li>)
                                         }
                                     </ul></td>
                                 </tr><hr />
@@ -109,8 +123,10 @@ const ProjectDetails = () => {
                                         <a className='mr-5' href={liveLink} target="_blank" rel="noopener noreferrer"><BsBroadcastPin className='inline ' /> Go Live</a>
 
                                         <a className='mr-5' href={clientLink} target="_blank" rel="noopener noreferrer"><FaStreetView className='inline ' /> Client</a>
-
-                                        <a href={serverLink} target="_blank" rel="noopener noreferrer"><BsServer className='inline ' /> Sever</a>
+                                        {
+                                            serverLink && <a href={serverLink} target="_blank" rel="noopener noreferrer"><BsServer className='inline ' /> Sever</a>
+                                        }
+                                        
                                     </td>
                                 </tr><hr />
 

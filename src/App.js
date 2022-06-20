@@ -11,6 +11,10 @@ import { Route, Routes } from 'react-router-dom';
 import ProjectDetails from './Components/ProjectDetails';
 import Test from './Components/Test';
 import { Switch } from 'react-router-dom';
+import Services from './Components/Services';
+import Contact from './Components/Contact';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -26,11 +30,13 @@ function App() {
           <Skills />
           <WorkFlow />
           <Portfolio />
+          <Services/>
+          <Contact/>
         </>}></Route>
         
         <Route path='/details/:id' element={<ProjectDetails />}></Route>
       </Routes>
-
+      <ToastContainer  autoClose={2000}/>
 
     </div>
   );
