@@ -7,13 +7,13 @@ import { GiFinishLine } from 'react-icons/gi';
 
 const WorkFlow = () => {
     return (
-        <div id='work-flow' className='bg-secondary px-12 py-28 '>
+        <div id='work-flow' className='bg-secondary px-4 lg:px-12 py-28 '>
             <div className='text-white'>
-                <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Work Flow</h1>
-                <h2 className='font-bold text-[50px] leading-tight text-accent'>My Work Process</h2>
+                <h1 className=' whitespace-nowrap  uppercase  text-2xl lg:text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Work Flow</h1>
+                <h2 className='font-bold text-[25px] lg:text-[50px] leading-tight text-accent'>My Work Process</h2>
             </div>
 
-            <div className='flex justify-center mt-24'>
+            <div className='flex justify-start lg:justify-center mt-24'>
                 <ul className="steps steps-vertical lg:steps-horizontal gap-5 cursor-pointer ">
 
                     {/* understanding steps */}

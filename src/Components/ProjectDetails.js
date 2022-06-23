@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useRef, useState } from "react";
 import './ProjectDetails.css';
 import { BsServer } from 'react-icons/bs';
 import { FaStreetView } from 'react-icons/fa';
@@ -32,7 +31,7 @@ const ProjectDetails = () => {
     const { name, type, stacks, detailsImg, descriptions, clientLink, serverLink, liveLink, credentials } = projectDetails;
 
     return (
-        <div className='bg-secondary flex flex-col justify-center justify-items-center lg:items-center lg:px-12 pt-5 '>
+        <div className='bg-secondary flex flex-col justify-center justify-items-center lg:items-center lg:px-12 py-5 '>
 
             <div className="card  lg:w-[800px] bg-base-100 shadow-xl ">
                 <div className="card-body">
@@ -73,7 +72,7 @@ const ProjectDetails = () => {
                     <h2 className="text-center font-semibold text-lg ">Project Details</h2><hr />
 
                     {/* //table content */}
-                    <div className=" bg-white">
+                    <div className=" bg-white overflow-x-auto">
                         <table className="table table-auto table-compact border-spacing-0 w-full ">
                             <tbody>
                                 <tr>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loading from './Loading';
-import './Portfolio.css';
 import ProjectCard from './ProjectCard';
+import './Portfolio.css';
 
 const Portfolio = () => {
     const [projects, setProjects] = useState([])
@@ -70,10 +70,10 @@ const Portfolio = () => {
     }
 
     return (
-        <div id='portfolio' className='lg:px-12 py-28'>
+        <div id='portfolio' className='px-4 lg:px-12 py-28'>
             <div className=''>
-                <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Portfolio</h1>
-                <h2 className='font-bold text-[50px] leading-tight text-accent'>My Featured Works</h2>
+                <h1 className=' whitespace-nowrap  uppercase text-2xl lg:text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Portfolio</h1>
+                <h2 className='font-bold text-[25px] lg:text-[50px] leading-tight text-accent'>My Featured Works</h2>
             </div>
 
             <div className='flex justify-center items-start my-12 font-semibold'>

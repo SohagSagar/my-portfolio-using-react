@@ -1,24 +1,24 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import './Contact.css';
 import { MdError } from 'react-icons/md';
 import { toast } from 'react-toastify';
+import './Contact.css';
+
 const Contact = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
+
     const onSubmit = data => {
-        // console.log(data);
-
-
         toast.success('Message Sent Successfully', {
             position: toast.POSITION.BOTTOM_CENTER
         })
     }
+
     return (
-        <div id='contact' className='lg:px-12 py-12  scroll-mt-[50px]'>
+        <div id='contact' className='px-4 lg:px-12 pt-12 lg:py-12  scroll-mt-[50px]'>
             <div className='pb-12'>
-                <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Contact</h1>
-                <h2 className='font-bold text-[50px] leading-tight text-accent'>Send me a message!</h2>
+                <h1 className=' whitespace-nowrap  uppercase text-2xl lg:text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Contact</h1>
+                <h2 className='font-bold text-[25px] lg:text-[50px] leading-tight text-accent'>Send me a message!</h2>
             </div>
 
             <div className="card w-96 lg:w-[1000px] bg-base-100 contact-info mx-auto ">
@@ -26,7 +26,6 @@ const Contact = () => {
                     <form onSubmit={handleSubmit(onSubmit)} className='gap-5'>
 
                         {/* your name */}
-
                         <input {...register("name", {
                             required: {
                                 value: true,

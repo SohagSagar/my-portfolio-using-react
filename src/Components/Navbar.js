@@ -1,19 +1,14 @@
 import React from 'react';
-import './Navbar.css';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';
 import { RiFacebookFill } from 'react-icons/ri';
 import { HashLink } from 'react-router-hash-link';
-
-
+import './Navbar.css';
 
 const Navbar = () => {
 
-
     const menu =
         <>
-
-
             <li><HashLink to="/#home">HOME</HashLink></li>
             <li><HashLink to="/#about">ABOUT</HashLink></li>
             <li><HashLink to="/#skills">SKILLS</HashLink></li>
@@ -21,7 +16,6 @@ const Navbar = () => {
             <li><HashLink to="/#portfolio">PORTFOLIO</HashLink></li>
             <li><HashLink to="/#services">SERVICES</HashLink></li>
             <li><HashLink to="/#contact">CONTACT</HashLink></li>
-
         </>
 
 
@@ -36,7 +30,7 @@ const Navbar = () => {
                         {menu}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Sohag Portfolio</a>
+                <HashLink className="btn btn-ghost normal-case text-xl" to="/#home">Sohag Portfolio</HashLink>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0 font-bold ">

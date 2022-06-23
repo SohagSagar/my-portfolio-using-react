@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React from 'react';
+
 import { useQuery } from 'react-query';
 import Loading from './Loading';
 import ServiceCard from './ServiceCard';
-import './Services.css'
+import './Services.css';
 
 const Services = () => {
     const {data:services,isLoading} = useQuery('services', ()=>fetch('http://localhost:5000/services').then(res=>res.json()))
@@ -13,10 +13,10 @@ const Services = () => {
     }
     
     return (
-        <div id='services' className='bg-secondary text-white lg:px-12 py-12 scroll-mt-[60px]'>
+        <div id='services' className='bg-secondary text-white px-4 lg:px-12 py-12 scroll-mt-[60px]'>
             <div className=''>
-                <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Service</h1>
-                <h2 className='font-bold text-[50px] leading-tight text-accent'>What I Offer For You</h2>
+                <h1 className=' whitespace-nowrap  uppercase text-2xl lg:text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Service</h1>
+                <h2 className='font-bold text-[25px] lg:text-[50px] leading-tight text-accent'>What I Offer For You</h2>
             </div>
 
                 {
