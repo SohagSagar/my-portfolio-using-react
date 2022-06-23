@@ -14,12 +14,12 @@ const WorkFlow = () => {
             </div>
 
             <div className='flex justify-center mt-24'>
-                <ul class="steps steps-vertical lg:steps-horizontal gap-5 cursor-pointer ">
+                <ul className="steps steps-vertical lg:steps-horizontal gap-5 cursor-pointer ">
 
                     {/* understanding steps */}
-                    <li class="step "><div>
-                        <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#DE4839] ">
-                            <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#DE4839]">
+                    <li className="step "><div>
+                        <div className="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#DE4839] ">
+                            <div className="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#DE4839]">
                                 <HiLightBulb className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Understand</p>
                                 <p className='mt-2 break-all text-left font-semibold'>First step to understand the project documentation.</p>
@@ -28,9 +28,9 @@ const WorkFlow = () => {
                     </div></li>
 
                     {/* define steps */}
-                    <li class="step"><div>
-                        <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#00AEFF]">
-                            <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#00AEFF]">
+                    <li className="step"><div>
+                        <div className="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#00AEFF]">
+                            <div className="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#00AEFF]">
                                 <MdGpsFixed className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Define</p>
                                 <p className='mt-2 break-all text-left font-semibold'>I brainstrom possible design solutions for the project.</p>
@@ -40,9 +40,9 @@ const WorkFlow = () => {
                     </div></li>
 
                     {/* skeleton steps */}
-                    <li class="step"><div>
-                        <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#6A1B4D]">
-                            <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#6A1B4D]">
+                    <li className="step"><div>
+                        <div className="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#6A1B4D]">
+                            <div className="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#6A1B4D]">
                                 <CgWebsite className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Skeleton</p>
                                 <p className='mt-2 break-all text-left font-semibold'>I create a skeleton of the product which is about to design.</p>
@@ -52,9 +52,9 @@ const WorkFlow = () => {
                     </div></li>
 
                     {/* Prototype steps */}
-                    <li class="step"><div>
-                        <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#8D3DAF]">
-                            <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#8D3DAF]">
+                    <li className="step"><div>
+                        <div className="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#8D3DAF]">
+                            <div className="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#8D3DAF]">
                                 <MdWeb className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Prototype</p>
                                 <p className='mt-2 break-all text-left font-semibold'>I make a design and prototype for the project</p>
@@ -63,10 +63,10 @@ const WorkFlow = () => {
                     </div></li>
 
                     {/* Implement steps */}
-                    <li class="step"><div>
-                        <div class="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#1FAA59]">
+                    <li className="step"><div>
+                        <div className="card w-[200px] h-[200px] bg-base-100 shadow-xl hover:bg-[#1FAA59]">
 
-                            <div class="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#1FAA59]">
+                            <div className="p-5 my-auto transition  duration-700  hover:duration-700 hover:transition-all hover:text-white card-actions justify-start items-center  text-[#1FAA59]">
                                 <GiFinishLine className='text-4xl inline ' />
                                 <p className='text-lg font-semibold'>Implement</p>
                                 <p className='mt-2 break-all text-left font-semibold'>After implementation I deliver for implementation</p>

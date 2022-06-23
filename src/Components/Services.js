@@ -13,7 +13,7 @@ const Services = () => {
     }
     
     return (
-        <div className='bg-secondary text-white lg:px-12 py-12'>
+        <div id='services' className='bg-secondary text-white lg:px-12 py-12 scroll-mt-[60px]'>
             <div className=''>
                 <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Service</h1>
                 <h2 className='font-bold text-[50px] leading-tight '>What I Offer For You</h2>

@@ -15,6 +15,8 @@ import Services from './Components/Services';
 import Contact from './Components/Contact';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from './Components/Footer';
+import ProjectOffer from './Components/ProjectOffer';
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
           <Portfolio />
           <Services/>
           <Contact/>
+          <Footer/>
+          <ProjectOffer/>
         </>}></Route>
         
         <Route path='/details/:id' element={<ProjectDetails />}></Route>

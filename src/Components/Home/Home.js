@@ -16,7 +16,7 @@ const Home = () => {
                     <p className='mt-[50px] font-normal text-xl text-justify'>I love to develop morden web application and focus mostly on frontend development. I like to craft  solid and scalable frondend products with great user experience.</p>
 
                     <div>
-                        <a class="btn btn-primary rounded-full w-48 h-[25px] mt-5 hover:btn-secondary" href="https://drive.google.com/file/d/1lXb-xTECp_PJ57Rm5SNzyBqgVnYK3M_G/view?usp=sharing" target="_blank" rel="noopener noreferrer">Get My Resume</a>
+                        <a className="btn btn-primary rounded-full w-48 h-[25px] mt-5 hover:btn-secondary" href="https://drive.google.com/file/d/1lXb-xTECp_PJ57Rm5SNzyBqgVnYK3M_G/view?usp=sharing" target="_blank" rel="noopener noreferrer">Get My Resume</a>
                     </div>
                 </div>
 

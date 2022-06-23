@@ -7,10 +7,7 @@ import './Portfolio.css';
 import ProjectCard from './ProjectCard';
 
 const Portfolio = () => {
-
     const [projects, setProjects] = useState([])
-
-    // const {data:projectInfo,isLoading}=useQuery('projects',()=>fetch('http://localhost:5000/project-info').then(res=>res.json()));
 
     useEffect(() => {
         fetch('http://localhost:5000/project-info')
@@ -24,19 +21,15 @@ const Portfolio = () => {
 
 
     const allBtn = () => {
-
         fetch(`http://localhost:5000/project-info`)
             .then(res => res.json())
             .then(data => {
                 const allProjects = data;
-                console.log(allProjects);
-                console.log('all clicked');
                 if (!allProjects) {
                     return <Loading />
                 }
                 setProjects(allProjects)
             })
-
     }
 
 
@@ -88,10 +81,10 @@ const Portfolio = () => {
 
             <div className='flex justify-center items-start my-12 font-semibold'>
 
-                <button onClick={allBtn} class="btn btn-ghost">ALL</button>
-                <button onClick={fullStack} class="btn btn-ghost">FULL STACK</button>
-                <button onClick={frontendBtn} class="btn btn-ghost">FRONTEND</button>
-                <button onClick={apiBtn} class="btn btn-ghost">API</button>
+                <button onClick={allBtn} className="btn btn-ghost">ALL</button>
+                <button onClick={fullStack} className="btn btn-ghost">FULL STACK</button>
+                <button onClick={frontendBtn} className="btn btn-ghost">FRONTEND</button>
+                <button onClick={apiBtn} className="btn btn-ghost">API</button>
 
 
 

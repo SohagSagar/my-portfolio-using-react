@@ -17,35 +17,26 @@ import "./Styles.css";
 
 // import required modules
 import { Autoplay, Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-
-import slider1 from '../resourses/slider/admin dashboard.png'
-import slider2 from '../resourses/slider/admin_add item.png'
-import slider3 from '../resourses/slider/login pannel.png'
-import slider4 from '../resourses/slider/user pannel.png'
 import { useQuery } from 'react-query';
-import Loading from './Loading';    
+import Loading from './Loading';
 
 
 const ProjectDetails = () => {
     const { id } = useParams();
-    console.log(id);
-    const { data: projectDetails, isLoading } = useQuery('project', () => fetch(`http://localhost:5000/project/${id}`).then(res => res.json()));  
-    
-   if(isLoading){
-    return <Loading/>
-   }
-    console.log('data',projectDetails.length);
-   
-    const { name, type, stacks, detailsImg, descriptions, clientLink, serverLink, liveLink, credentials } = projectDetails;
-    console.log(projectDetails);
+    const { data: projectDetails, isLoading } = useQuery('project', () => fetch(`http://localhost:5000/project/${id}`).then(res => res.json()));
 
+    if (isLoading) {
+        return <Loading />
+    }
+
+    const { name, type, stacks, detailsImg, descriptions, clientLink, serverLink, liveLink, credentials } = projectDetails;
 
     return (
         <div className='bg-secondary flex flex-col justify-center justify-items-center lg:items-center lg:px-12 pt-5 '>
 
-            <div class="card  lg:w-[800px] bg-base-100 shadow-xl ">
-                <div class="card-body">
-                    <h2 class="text-center font-semibold text-lg ">Featured Images</h2>
+            <div className="card  lg:w-[800px] bg-base-100 shadow-xl ">
+                <div className="card-body">
+                    <h2 className="text-center font-semibold text-lg ">Featured Images</h2>
                     {
                         !detailsImg && <Loading></Loading>
                     }
@@ -69,70 +60,73 @@ const ProjectDetails = () => {
 
                     >
                         {
-                            detailsImg?.map(img=><SwiperSlide key={img._id}><img src={img} alt="" /> </SwiperSlide>)
+                            detailsImg?.map((img, index) => <SwiperSlide key={index}><img src={img} alt="" /> </SwiperSlide>)
                         }
-                        
+
 
                     </Swiper>
                 </div>
             </div>
 
-            <div class="card lg:w-[800px] bg-base-100 shadow-xl mt-5">
-                <div class="card-body">
-                    <h2 class="text-center font-semibold text-lg ">Project Details</h2><hr />
+            <div className="card lg:w-[800px] bg-base-100 shadow-xl mt-5">
+                <div className="card-body">
+                    <h2 className="text-center font-semibold text-lg ">Project Details</h2><hr />
 
                     {/* //table content */}
-                    <div class=" bg-white">
-                        <table class="table table-auto table-compact border-spacing-0 w-full ">
+                    <div className=" bg-white">
+                        <table className="table table-auto table-compact border-spacing-0 w-full ">
                             <tbody>
                                 <tr>
                                     <th>Name</th>
                                     <td>{name}</td>
-                                </tr><hr />
+                                </tr>
 
                                 <tr>
                                     <th>Credentials</th>
                                     {
-                                        credentials?.length>0 ? <td>{credentials[0]} <br /> {credentials[1]}</td> :
-                                        <td>N/A</td>
+                                        credentials?.length > 0 ? <td>{credentials[0]} <br /> {credentials[1]}</td> :
+                                            <td>N/A</td>
                                     }
-                                </tr><hr />
+                                </tr>
 
                                 <tr>
                                     <th>Type</th>
                                     <td>{type}</td>
-                                </tr><hr />
+
+                                </tr>
 
                                 <tr>
                                     <th>Stacks</th>
                                     <td>{stacks}</td>
-                                </tr><hr />
 
-                                <tr>
-                                    <th>Descriptions</th>
-                                    <td><ul className='list-disc list-inside text-justify whitespace-pre-line'>
-                                        {
-                                            descriptions?.map(des => <li key={des._key}>{des}</li>)
-                                        }
-                                    </ul></td>
-                                </tr><hr />
+                                </tr>
+                                    <tr>
+                                        <th>Descriptions</th>
+                                        <td><ul className='list-disc list-inside text-justify whitespace-pre-line'>
+                                            {
+                                                descriptions?.map((des, index) => <li key={index}>{des}</li>)
+                                            }
+                                        </ul></td>
 
-                                <tr>
-                                    <th>Codes</th>
-                                    <td >
-                                        <a className='mr-5' href={liveLink} target="_blank" rel="noopener noreferrer"><BsBroadcastPin className='inline ' /> Go Live</a>
+                                    </tr>
 
-                                        <a className='mr-5' href={clientLink} target="_blank" rel="noopener noreferrer"><FaStreetView className='inline ' /> Client</a>
-                                        {
-                                            serverLink && <a href={serverLink} target="_blank" rel="noopener noreferrer"><BsServer className='inline ' /> Sever</a>
-                                        }
-                                        
-                                    </td>
-                                </tr><hr />
+                                    <tr>
+                                        <th>Codes</th>
+                                        <td >
+                                            <a className='mr-5' href={liveLink} target="_blank" rel="noopener noreferrer"><BsBroadcastPin className='inline ' /> Go Live</a>
+
+                                            <a className='mr-5' href={clientLink} target="_blank" rel="noopener noreferrer"><FaStreetView className='inline ' /> Client</a>
+                                            {
+                                                serverLink && <a href={serverLink} target="_blank" rel="noopener noreferrer"><BsServer className='inline ' /> Sever</a>
+                                            }
+
+                                        </td>
+                                    </tr>
 
                             </tbody>
 
                         </table>
+                        <hr />
                     </div>
                     {/* table ends */}
 
