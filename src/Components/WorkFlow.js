@@ -10,7 +10,7 @@ const WorkFlow = () => {
         <div id='work-flow' className='bg-secondary px-12 py-28 '>
             <div className='text-white'>
                 <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Work Flow</h1>
-                <h2 className='font-bold text-[50px] leading-tight '>My Work Process</h2>
+                <h2 className='font-bold text-[50px] leading-tight text-accent'>My Work Process</h2>
             </div>
 
             <div className='flex justify-center mt-24'>

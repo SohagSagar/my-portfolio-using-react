@@ -16,7 +16,7 @@ const Footer = () => {
                 <div>
                     <span class="footer-title"></span>
                     <h1 className='text-2xl text-primary'>Sohag Sagar</h1>
-                    <p className='text-lg leading-3 pb-1'>A Mern StacK Developer</p>
+                    <p className='text-lg leading-3 pb-1'>A Mern Stack Developer</p>
                     {/* <p className='text-md leading-3 pb-2'>Rampura,Dhaka,Bangladesh</p> */}
                     <div className='flex item-center justify-around text-xl '>
 

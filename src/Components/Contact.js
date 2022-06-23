@@ -18,7 +18,7 @@ const Contact = () => {
         <div id='contact' className='lg:px-12 py-12  scroll-mt-[50px]'>
             <div className='pb-12'>
                 <h1 className=' whitespace-nowrap  uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-60'> Contact</h1>
-                <h2 className='font-bold text-[50px] leading-tight '>Send me a message!</h2>
+                <h2 className='font-bold text-[50px] leading-tight text-accent'>Send me a message!</h2>
             </div>
 
             <div className="card w-96 lg:w-[1000px] bg-base-100 contact-info mx-auto ">

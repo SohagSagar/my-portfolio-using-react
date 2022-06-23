@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* //google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cormorant+Garamond&family=Dosis:wght@300&family=Kdam+Thmor+Pro&family=Maven+Pro&family=Merriweather&family=Open+Sans&family=Poppins&family=Raleway:wght@200&family=Roboto&family=Signika+Negative:wght@500&family=Source+Sans+Pro:wght@200&family=Space+Mono&family=Zilla+Slab:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bree+Serif&family=Cormorant+Garamond&family=Crete+Round&family=Dosis:wght@300&family=Kdam+Thmor+Pro&family=Maven+Pro&family=Merriweather&family=Open+Sans&family=Poppins&family=Raleway:wght@200&family=Roboto&family=Secular+One&family=Signika+Negative:wght@500&family=Source+Sans+Pro:wght@200&family=Space+Mono&family=Zilla+Slab:wght@600&display=swap');
 
 body {
   margin: 0;

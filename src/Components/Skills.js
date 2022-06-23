@@ -11,14 +11,14 @@ const Skills = () => {
             .then(data => setSkills(data))
     }, [])
     return (
-        <div id='skills' className='px-12 mt-16 mb-28 scroll-mt-[80px]'>
+        <div id='skills' className='px-12  py-16 scroll-mt-[80px]'>
             <h1 className='text-secondary uppercase text-4xl font-semibold border-b-4 border-primary pb-2 w-44'> Skills</h1>
-            <h2 className='font-bold text-[50px] leading-tight '>What My Programming <br />skills included?</h2>
+            <h2 className='font-bold text-[50px] leading-tight text-accent'>What My Programming <br />skills included?</h2>
 
-            <div className="hero ">
-                <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero text-accent">
+                <div className="skill-content flex-col lg:flex-row-reverse">
 
-                    <div className='all-skills py-10 grid lg:grid-cols-6 sm:grid-cols-3  gap-4 justify-items-center   '>
+                    <div className='all-skills py-10 grid lg:grid-cols-6 sm:grid-cols-3  gap-4 justify-items-center'>
 
                         {
                             skills.map((skill, index) => <SkillCard key={index} skill={skill}></SkillCard>)
@@ -26,8 +26,8 @@ const Skills = () => {
 
                     </div>
                     <div className='lg:w-[400px]'>
-                        <p className="py-6">I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.</p>
-                        <div className='py-6'>
+                        <p className="py-6 text-xl">I develop simple, intuitive and responsive user interface that helps users get things done with less effort and time with those technologies.</p>
+                        <div>
                             <button className="btn btn-primary rounded-full hover:bg-secondary hover:text-white border-0 w-36">Hire me</button>
                         </div>
                     </div>
