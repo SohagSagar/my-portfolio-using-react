@@ -7,7 +7,7 @@ const Portfolio = () => {
     const [projects, setProjects] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/project-info')
+        fetch('https://peaceful-brushlands-64754.herokuapp.com/project-info')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, [])
@@ -18,7 +18,7 @@ const Portfolio = () => {
 
 
     const allBtn = () => {
-        fetch(`http://localhost:5000/project-info`)
+        fetch(`https://peaceful-brushlands-64754.herokuapp.com/project-info`)
             .then(res => res.json())
             .then(data => {
                 const allProjects = data;
@@ -32,7 +32,7 @@ const Portfolio = () => {
 
     const fullStack = () => {
         const type = 'Full-stack';
-        fetch(`http://localhost:5000/project-info/${type}`)
+        fetch(`https://peaceful-brushlands-64754.herokuapp.com/project-info/${type}`)
             .then(res => res.json())
             .then(data => {
                 const allProjects = data;
@@ -45,7 +45,7 @@ const Portfolio = () => {
 
     const frontendBtn = () => {
         const type = 'Frontend';
-        fetch(`http://localhost:5000/project-info/${type}`)
+        fetch(`https://peaceful-brushlands-64754.herokuapp.com/project-info/${type}`)
             .then(res => res.json())
             .then(data => {
                 const allProjects = data;
@@ -58,7 +58,7 @@ const Portfolio = () => {
 
     const apiBtn = () => {
         const type = 'API';
-        fetch(`http://localhost:5000/project-info/${type}`)
+        fetch(`https://peaceful-brushlands-64754.herokuapp.com/project-info/${type}`)
             .then(res => res.json())
             .then(data => {
                 const allProjects = data;

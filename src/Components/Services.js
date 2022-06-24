@@ -6,7 +6,7 @@ import ServiceCard from './ServiceCard';
 import './Services.css';
 
 const Services = () => {
-    const {data:services,isLoading} = useQuery('services', ()=>fetch('http://localhost:5000/services').then(res=>res.json()))
+    const {data:services,isLoading} = useQuery('services', ()=>fetch('https://peaceful-brushlands-64754.herokuapp.com/services').then(res=>res.json()))
 
     if(isLoading){
          <Loading/>

@@ -22,7 +22,7 @@ import Loading from './Loading';
 
 const ProjectDetails = () => {
     const { id } = useParams();
-    const { data: projectDetails, isLoading } = useQuery('project', () => fetch(`http://localhost:5000/project/${id}`).then(res => res.json()));
+    const { data: projectDetails, isLoading } = useQuery('project', () => fetch(`https://peaceful-brushlands-64754.herokuapp.com/project/${id}`).then(res => res.json()));
 
     if (isLoading) {
         return <Loading />

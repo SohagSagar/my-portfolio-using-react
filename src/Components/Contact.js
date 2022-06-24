@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { MdError } from 'react-icons/md';
 import { toast } from 'react-toastify';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -9,9 +10,30 @@ const Contact = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        toast.success('Message Sent Successfully', {
-            position: toast.POSITION.BOTTOM_CENTER
-        })
+        const { name, subject, email, message } = data;
+
+        const templateParams = {
+            from_name: name,
+            subject: subject,
+            from_email: email,
+            message: message
+        };
+
+        emailjs.send('service_gwtturt', 'portfolio-contact', templateParams, 'ojMHQSVQUurZVEZb5')
+            .then(function (response) {
+                if (response.status === 200) {
+                    toast.success('Message Sent Successfully', {
+                        position: toast.POSITION.BOTTOM_CENTER
+                    })
+                }
+
+
+            }, function (error) {
+                toast.error('Fail to sent.Try again!', {
+                    position: toast.POSITION.BOTTOM_CENTER
+                })
+            });
+
     }
 
     return (
